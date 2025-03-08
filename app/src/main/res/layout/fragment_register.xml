@@ -1,0 +1,212 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white">
+
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scaleType="fitStart"
+        android:src="@drawable/blury_background2" />
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <ImageView
+            android:id="@+id/carrotIntro"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="70dp"
+            android:foregroundGravity="center"
+            android:src="@drawable/carrot_color"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/tvRegisterSignUp"
+            style="@style/h3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Sign Up"
+            android:layout_marginLeft="5dp"
+            android:textStyle="bold"
+            app:layout_constraintStart_toStartOf="@id/guidelineRegisterLeft"
+            app:layout_constraintTop_toTopOf="@id/guidelineRegisterTop" />
+
+        <TextView
+            android:id="@+id/tvRegisterDescription"
+            style="@style/h1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Enter your credentials to continue"
+            android:textColor="@color/g_gray500"
+            app:layout_constraintStart_toStartOf="@id/tvRegisterSignUp"
+            app:layout_constraintTop_toBottomOf="@id/tvRegisterSignUp" />
+
+
+        <TextView
+            android:id="@+id/tvFullName"
+            style="@style/h1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Full Name"
+            android:textColor="@color/g_gray700"
+            android:layout_marginTop="50dp"
+            android:textStyle="bold"
+            app:layout_constraintStart_toStartOf="@id/tvRegisterDescription"
+            app:layout_constraintTop_toBottomOf="@id/tvRegisterDescription" />
+
+        <EditText
+            android:id="@+id/edRegisterFullName"
+            android:layout_width="0dp"
+            android:layout_height="@dimen/editTextHeight"
+            app:layout_constraintStart_toStartOf="@id/guidelineRegisterLeft"
+            app:layout_constraintEnd_toEndOf="@id/guidelineRegisterRight"
+            app:layout_constraintTop_toBottomOf="@id/tvFullName"
+            style="@style/editText"
+            android:hint="Full Name"
+            android:inputType="text"
+            android:layout_marginTop="0dp"/>
+
+        <TextView
+            android:id="@+id/tvRegisterEmail"
+            style="@style/h1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Email"
+            android:textColor="@color/g_gray700"
+            android:layout_marginTop="10dp"
+            android:textStyle="bold"
+            android:layout_marginLeft="5dp"
+            app:layout_constraintStart_toStartOf="@id/edRegisterFullName"
+            app:layout_constraintTop_toBottomOf="@id/edRegisterFullName" />
+
+        <EditText
+            android:id="@+id/edRegisterEmail"
+            android:layout_width="0dp"
+            android:layout_height="@dimen/editTextHeight"
+            app:layout_constraintStart_toStartOf="@id/guidelineRegisterLeft"
+            app:layout_constraintEnd_toEndOf="@id/guidelineRegisterRight"
+            app:layout_constraintTop_toBottomOf="@id/tvRegisterEmail"
+            style="@style/editText"
+            android:hint="Email"
+            android:inputType="textEmailAddress"/>
+
+        <TextView
+            android:id="@+id/tvRegisterPassword"
+            style="@style/h1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Password"
+            android:textColor="@color/g_gray700"
+            android:layout_marginTop="10dp"
+            android:textStyle="bold"
+            android:layout_marginLeft="5dp"
+            app:layout_constraintStart_toStartOf="@id/edRegisterEmail"
+            app:layout_constraintTop_toBottomOf="@id/edRegisterEmail" />
+
+        <EditText
+            android:id="@+id/edRegisterPassword"
+            android:layout_width="0dp"
+            android:layout_height="@dimen/editTextHeight"
+            app:layout_constraintStart_toStartOf="@id/guidelineRegisterLeft"
+            app:layout_constraintEnd_toEndOf="@id/guidelineRegisterRight"
+            app:layout_constraintTop_toBottomOf="@id/tvRegisterPassword"
+            style="@style/editText"
+            android:hint="Password"
+            android:inputType="textPassword"/>
+
+        <LinearLayout
+            android:id="@+id/groupTextTermsPolicy"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:textAlignment="center"
+            android:gravity="center"
+            app:layout_constraintTop_toBottomOf="@id/edRegisterPassword"
+            app:layout_constraintStart_toStartOf="@id/edRegisterPassword"
+            app:layout_constraintEnd_toEndOf="@id/edRegisterPassword">
+            <TextView
+                android:text="By coninuing you agree our "
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"/>
+            <TextView
+                android:text="Terms of Service"
+                android:textColor="@color/g_green"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"/>
+            <TextView
+                android:text=" and "
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"/>
+            <TextView
+                android:text="Privacy"
+                android:textColor="@color/g_green"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"/>
+        </LinearLayout>
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/buttonRegisterRegister"
+            style="@style/greenButtonStyle"
+            android:layout_width="0dp"
+            android:layout_height="@dimen/mediumButtonHeight"
+            android:text="Sign Up"
+            android:layout_marginTop="22dp"
+            app:layout_constraintEnd_toEndOf="@id/guidelineRegisterRight"
+            app:layout_constraintStart_toStartOf="@id/guidelineRegisterLeft"
+            app:layout_constraintTop_toBottomOf="@id/groupTextTermsPolicy" />
+
+        <LinearLayout
+            android:id="@+id/groupTextDontHaveAcount"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:textAlignment="center"
+            android:gravity="center"
+            app:layout_constraintTop_toBottomOf="@id/buttonRegisterRegister"
+            app:layout_constraintStart_toStartOf="@id/buttonRegisterRegister"
+            app:layout_constraintEnd_toEndOf="@id/buttonRegisterRegister"
+            >
+            <TextView
+                android:textStyle="bold"
+                android:text="Already have an account?"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"/>
+            <TextView
+                android:id="@+id/tvRegisterBackToLogin"
+                android:text="Login"
+                android:textStyle="bold"
+                android:textColor="@color/g_green"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"/>
+        </LinearLayout>
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/guidelineRegisterTop"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            app:layout_constraintGuide_percent="0.26" />
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/guidelineRegisterLeft"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintGuide_percent=".06" />
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/guidelineRegisterRight"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintGuide_percent=".94" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</FrameLayout>

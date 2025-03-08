@@ -1,0 +1,147 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:background="@color/white"
+    app:elevation="0dp">
+    <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/white">
+
+
+        <ImageView
+            android:id="@+id/imgCartItemImage"
+            android:layout_width="70dp"
+            android:layout_height="65dp"
+            android:src="@drawable/product_item_sample"
+            app:layout_constraintStart_toStartOf="@id/guidelineCartItemLeft"
+            app:layout_constraintBottom_toBottomOf="@id/guidelineCartItemBottom"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <LinearLayout
+            android:id="@+id/linearCartItemContent"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="25dp"
+            android:layout_marginTop="20dp"
+            android:orientation="vertical"
+            app:layout_constraintLeft_toRightOf="@id/imgCartItemImage"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <TextView
+                android:id="@+id/tvCartItemProductName"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/poppins_thin"
+                android:text="Organic Bananas" />
+
+            <TextView
+                android:id="@+id/tvCartItemProductWeigh"
+                style="@style/h1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text=" 1 kg, Price"
+                android:textSize="12dp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/linearCartItemPlusSubtract"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginTop="10dp"
+            app:layout_constraintStart_toStartOf="@id/linearCartItemContent"
+            app:layout_constraintTop_toBottomOf="@id/linearCartItemContent">
+
+            <ImageButton
+                android:id="@+id/buttonCartItemQuantitySubtract"
+                android:layout_width="45.67dp"
+                android:layout_height="45.67dp"
+                android:background="@drawable/product_detail_number_background"
+                android:src="@drawable/ic_subtract"
+                app:layout_constraintTop_toBottomOf="@id/tvProductItemWeight" />
+
+            <TextView
+                android:id="@+id/tvCartItemQuantity"
+                android:layout_width="45.67dp"
+                android:layout_height="45.67dp"
+                android:fontFamily="@font/poppins_thin"
+                android:gravity="center"
+                android:text="1"
+                android:textAlignment="center" />
+
+            <ImageButton
+                android:id="@+id/buttonCartItemQuantityPlus"
+                android:layout_width="45.67dp"
+                android:layout_height="45.67dp"
+                android:background="@drawable/product_detail_number_background"
+                android:src="@drawable/ic_plus"
+                app:layout_constraintTop_toBottomOf="@id/tvProductItemWeight" />
+        </LinearLayout>
+
+        <ImageView
+            android:id="@+id/imgButtonDeleteCartItem"
+            android:layout_width="12dp"
+            android:layout_height="15dp"
+            android:layout_marginTop="5dp"
+            android:src="@drawable/ic_delete"
+            app:layout_constraintEnd_toEndOf="@id/guidelineCartItemRight"
+            app:layout_constraintTop_toTopOf="@id/linearCartItemContent" />
+
+        <LinearLayout
+            android:id="@+id/linearCartItemPrice"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintBottom_toBottomOf="@id/linearCartItemPlusSubtract"
+            app:layout_constraintEnd_toEndOf="@id/guidelineCartItemRight"
+            app:layout_constraintTop_toTopOf="@id/linearCartItemPlusSubtract">
+            <TextView
+                android:id="@+id/tvCartItemPrice"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/poppins_thin"
+                android:text="4.99" />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/poppins_thin"
+                android:text=" $" />
+        </LinearLayout>
+
+
+        <ImageView
+            android:id="@+id/imgLineBreakProductDetailDetailHeader"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_linebreak"
+            app:layout_constraintEnd_toEndOf="@id/guidelineCartItemRight"
+            app:layout_constraintStart_toStartOf="@id/guidelineCartItemLeft"
+            app:layout_constraintTop_toBottomOf="@id/guidelineCartItemBottom" />
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/guidelineCartItemLeft"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintGuide_percent="0.06" />
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/guidelineCartItemRight"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintGuide_percent="0.94" />
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/guidelineCartItemBottom"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            app:layout_constraintGuide_begin="141dp" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</LinearLayout>

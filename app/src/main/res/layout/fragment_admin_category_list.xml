@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white">
+
+    <ImageView
+        android:id="@+id/imgAdminListCategoryBack"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:src="@drawable/arrow_left"
+        app:layout_constraintStart_toStartOf="@id/guidelineAdminCategoryListLeft"
+        app:layout_constraintTop_toTopOf="@id/tvAdminCategoryList"
+        android:textAlignment="center" />
+
+    <ImageView
+        android:id="@+id/imgAdminListCategoryAddNew"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:src="@drawable/ic_plus"
+        app:layout_constraintEnd_toEndOf="@id/guidelineAdminCategoryListRight"
+        app:layout_constraintTop_toTopOf="@id/tvAdminCategoryList"
+        android:textAlignment="center" />
+
+    <TextView
+        android:id="@+id/tvAdminCategoryList"
+        style="@style/h3_bold"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:text="List Category"
+        android:textAlignment="center"
+        app:layout_constraintEnd_toEndOf="@id/guidelineAdminCategoryListRight"
+        app:layout_constraintStart_toStartOf="@id/guidelineAdminCategoryListLeft"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/viewRecycleAdminCategoryList"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintStart_toStartOf="@id/guidelineAdminCategoryListLeft"
+        app:layout_constraintTop_toBottomOf="@id/imgAdminListCategoryBack"
+        android:layout_marginTop="10dp"/>
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guidelineAdminCategoryListLeft"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.06"/>
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guidelineAdminCategoryListRight"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.94"/>
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,145 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/white"
+    app:elevation="0dp">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="10dp"
+        android:background="@color/white">
+
+        <ImageView
+            android:id="@+id/adminProductRecycleImage"
+            android:layout_width="90dp"
+            android:layout_height="90dp"
+            android:src="@drawable/product_apple"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintBottom_toBottomOf="@id/guidelineAdminProductBottom"/>
+
+        <LinearLayout
+            android:id="@+id/linearAdminProductRecycleContent"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_marginLeft="10dp"
+            app:layout_constraintLeft_toRightOf="@id/adminProductRecycleImage"
+            app:layout_constraintTop_toTopOf="@id/adminProductRecycleImage"
+            app:layout_constraintBottom_toBottomOf="@id/adminProductRecycleImage">
+
+            <TextView
+                style="@style/h1_bold"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="ID: " />
+            <TextView
+                style="@style/h1_bold"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Name: " />
+
+            <TextView
+                style="@style/h1_bold"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Category: " />
+
+            <TextView
+                style="@style/h1_bold"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Price: " />
+
+
+            <TextView
+                style="@style/h1_bold"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Amount: " />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/linearViewRecycleProductData"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintLeft_toRightOf="@id/linearAdminProductRecycleContent"
+            app:layout_constraintTop_toTopOf="@id/linearAdminProductRecycleContent">
+
+            <TextView
+                android:id="@+id/tvRecycleAdminProductId"
+                style="@style/h1_bold"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="123" />
+            <TextView
+                android:id="@+id/tvRecycleAdminProductName"
+                style="@style/h1_bold"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="123" />
+
+            <TextView
+                android:id="@+id/tvRecycleAdminProductCategory"
+                style="@style/h1_bold"
+                android:layout_width="100dp"
+                android:layout_height="wrap_content"
+                android:text="123" />
+
+            <TextView
+                android:id="@+id/tvRecycleAdminProductPrice"
+                style="@style/h1_bold"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="123" />
+            <TextView
+                android:id="@+id/tvRecycleAdminProductAmount"
+                style="@style/h1_bold"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="123" />
+        </LinearLayout>
+
+        <ImageView
+            android:id="@+id/imgButtonRecycleAdminProductDetail"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_marginLeft="5dp"
+            android:src="@drawable/ic_edit"
+            app:layout_constraintBottom_toBottomOf="@id/linearViewRecycleProductData"
+            app:layout_constraintLeft_toRightOf="@id/linearViewRecycleProductData"
+            app:layout_constraintTop_toTopOf="@id/linearViewRecycleProductData" />
+
+        <ImageView
+            android:id="@+id/imgButtonRecycleAdminProductDelete"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_marginLeft="5dp"
+            android:src="@drawable/ic_delete"
+            app:layout_constraintBottom_toBottomOf="@id/imgButtonRecycleAdminProductDetail"
+            app:layout_constraintLeft_toRightOf="@id/imgButtonRecycleAdminProductDetail"
+            app:layout_constraintTop_toTopOf="@id/imgButtonRecycleAdminProductDetail" />
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_linebreak"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/guidelineAdminProductBottom"/>
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/guidelineAdminProductBottom"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            app:layout_constraintGuide_begin="120dp" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</LinearLayout>

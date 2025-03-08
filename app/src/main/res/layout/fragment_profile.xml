@@ -1,0 +1,338 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white">
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cartViewImage"
+        android:layout_width="64dp"
+        android:layout_height="64dp"
+        android:layout_marginTop="30dp"
+        android:clipChildren="true"
+        android:clipToPadding="true"
+        app:cardCornerRadius="50dp"
+        app:cardElevation="4dp"
+        app:layout_constraintStart_toStartOf="@id/guidelineProfileLeft"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <ImageView
+            android:id="@+id/imgProfilePicture"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@drawable/circle_border"
+            android:scaleType="fitXY"
+            android:src="@drawable/girl" />
+    </androidx.cardview.widget.CardView>
+    <TextView
+        android:id="@+id/tvProfileUserName"
+        style="@style/h2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="20dp"
+        android:fontFamily="@font/poppins_thin"
+        android:text="Nguyen Hoang"
+        android:textStyle="bold"
+        app:layout_constraintLeft_toRightOf="@id/cartViewImage"
+        app:layout_constraintTop_toTopOf="@id/cartViewImage" />
+    <TextView
+        android:id="@+id/tvProfileEmail"
+        style="@style/h1_bold"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="nguyenhoangxdxd@gmail.com"
+        app:layout_constraintStart_toStartOf="@id/tvProfileUserName"
+        app:layout_constraintTop_toBottomOf="@id/tvProfileUserName" />
+    <ImageView
+        android:id="@+id/imgProfileEditProfile"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp"
+        android:src="@drawable/ic_edit"
+        app:layout_constraintBottom_toBottomOf="@id/tvProfileUserName"
+        app:layout_constraintLeft_toRightOf="@id/tvProfileUserName"
+        app:layout_constraintTop_toTopOf="@id/tvProfileUserName" />
+    <ImageView
+        android:id="@+id/imgLineBreakLongContent"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/ic_linebreak_long"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/guidelineProfileContent" />
+
+    <LinearLayout
+        android:id="@+id/linearProfileOrder"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        app:layout_constraintStart_toStartOf="@id/guidelineProfileLeft"
+        app:layout_constraintTop_toBottomOf="@id/imgLineBreakLongContent">
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="2dp"
+            android:layout_marginRight="20dp"
+            android:src="@drawable/ic_menu_bottom_home" />
+
+        <TextView
+            android:id="@+id/tvProfileOrder"
+            style="@style/h2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/poppins_thin"
+            android:text="Order"
+            android:textStyle="bold" />
+    </LinearLayout>
+    <ImageView
+        android:id="@+id/imgLineBreakProfileOrder"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:src="@drawable/ic_linebreak_long"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/linearProfileOrder" />
+
+    <LinearLayout
+        android:id="@+id/linearProfileNotification"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        app:layout_constraintStart_toStartOf="@id/guidelineProfileLeft"
+        app:layout_constraintTop_toBottomOf="@id/imgLineBreakProfileOrder">
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="2dp"
+            android:layout_marginRight="20dp"
+            android:src="@drawable/ic_menu_bottom_home" />
+
+        <TextView
+            android:id="@+id/tvProfileNotification"
+            style="@style/h2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/poppins_thin"
+            android:text="Notification"
+            android:textStyle="bold" />
+    </LinearLayout>
+    <ImageView
+        android:id="@+id/imgLineBreakProfileNotification"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:src="@drawable/ic_linebreak_long"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/linearProfileNotification" />
+
+    <LinearLayout
+        android:id="@+id/linearProfileHelp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        app:layout_constraintStart_toStartOf="@id/guidelineProfileLeft"
+        app:layout_constraintTop_toBottomOf="@id/imgLineBreakProfileNotification">
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="2dp"
+            android:layout_marginRight="20dp"
+            android:src="@drawable/ic_menu_bottom_home" />
+
+        <TextView
+            android:id="@+id/tvProfileHelp"
+            style="@style/h2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/poppins_thin"
+            android:text="Help"
+            android:textStyle="bold" />
+    </LinearLayout>
+    <ImageView
+        android:id="@+id/imgLineBreakProfileHelp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:src="@drawable/ic_linebreak_long"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/linearProfileHelp" />
+
+    <LinearLayout
+        android:id="@+id/linearProfileManageAccount"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        app:layout_constraintStart_toStartOf="@id/guidelineProfileLeft"
+        app:layout_constraintTop_toBottomOf="@id/imgLineBreakProfileAbout">
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="2dp"
+            android:layout_marginRight="20dp"
+            android:src="@drawable/ic_menu_bottom_home" />
+
+        <TextView
+            android:id="@+id/tvProfileManageAccount"
+            style="@style/h2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/poppins_thin"
+            android:text="Manage Account"
+            android:textStyle="bold" />
+    </LinearLayout>
+    <ImageView
+        android:id="@+id/imgLineBreakProfileManageAccount"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:src="@drawable/ic_linebreak_long"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/linearProfileManageAccount" />
+
+    <LinearLayout
+        android:id="@+id/linearProfileManageCategory"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        app:layout_constraintStart_toStartOf="@id/guidelineProfileLeft"
+        app:layout_constraintTop_toBottomOf="@id/imgLineBreakProfileManageAccount">
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="2dp"
+            android:layout_marginRight="20dp"
+            android:src="@drawable/ic_menu_bottom_home" />
+
+        <TextView
+            android:id="@+id/tvProfileManageCategory"
+            style="@style/h2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/poppins_thin"
+            android:text="Manage Category"
+            android:textStyle="bold" />
+    </LinearLayout>
+    <ImageView
+        android:id="@+id/imgLineBreakProfileManageCategory"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:src="@drawable/ic_linebreak_long"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/linearProfileManageCategory" />
+
+    <LinearLayout
+        android:id="@+id/linearProfileManageProduct"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        app:layout_constraintStart_toStartOf="@id/guidelineProfileLeft"
+        app:layout_constraintTop_toBottomOf="@id/imgLineBreakProfileManageCategory">
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="2dp"
+            android:layout_marginRight="20dp"
+            android:src="@drawable/ic_menu_bottom_home" />
+
+        <TextView
+            android:id="@+id/tvProfileManageProduct"
+            style="@style/h2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/poppins_thin"
+            android:text="Manage Product"
+            android:textStyle="bold" />
+    </LinearLayout>
+    <ImageView
+        android:id="@+id/imgLineBreakProfileManageProduct"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:src="@drawable/ic_linebreak_long"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/linearProfileManageProduct" />
+
+    <LinearLayout
+        android:id="@+id/linearProfileAbout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        app:layout_constraintStart_toStartOf="@id/guidelineProfileLeft"
+        app:layout_constraintTop_toBottomOf="@id/imgLineBreakProfileHelp">
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="2dp"
+            android:layout_marginRight="20dp"
+            android:src="@drawable/ic_menu_bottom_home" />
+
+        <TextView
+            android:id="@+id/tvProfileAbout"
+            style="@style/h2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/poppins_thin"
+            android:text="About"
+            android:textStyle="bold" />
+    </LinearLayout>
+    <ImageView
+        android:id="@+id/imgLineBreakProfileAbout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:src="@drawable/ic_linebreak_long"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/linearProfileAbout" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        style="@style/whiteButtonStyle"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="50dp"
+        android:drawableStart="@drawable/ic_logout"
+        android:paddingStart="10dp"
+        android:paddingEnd="20dp"
+        android:text="Log out"
+        android:textColor="@color/g_green"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="@id/guidelineProfileRight"
+        app:layout_constraintStart_toStartOf="@id/guidelineProfileLeft" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guidelineProfileContent"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.16" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guidelineProfileLeft"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.06" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guidelineProfileRight"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.94" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

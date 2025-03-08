@@ -1,0 +1,146 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <ImageView
+        android:id="@+id/imgAdminAccountDetailBack"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:src="@drawable/arrow_left"
+        app:layout_constraintStart_toStartOf="@id/guidelineAdminAccountDetailLeft"
+        app:layout_constraintTop_toTopOf="@id/tvAdminAccountDetail"
+        android:textAlignment="center" />
+
+    <TextView
+        android:id="@+id/tvAdminAccountDetail"
+        style="@style/h3_bold"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:text="Account Detail"
+        android:textAlignment="center"
+        app:layout_constraintEnd_toEndOf="@id/guidelineAdminAccountDetailRight"
+        app:layout_constraintStart_toStartOf="@id/guidelineAdminAccountDetailLeft"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/tvAccountDetailEmail"
+        style="@style/h1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Email"
+        android:textColor="@color/g_gray700"
+        android:layout_marginTop="10dp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="@id/guidelineAdminAccountDetailLeft"
+        app:layout_constraintTop_toBottomOf="@id/tvAdminAccountDetail" />
+
+    <EditText
+        android:id="@+id/edAccountDetailEmail"
+        android:layout_width="0dp"
+        android:layout_height="@dimen/editTextHeight"
+        app:layout_constraintStart_toStartOf="@id/guidelineAdminAccountDetailLeft"
+        app:layout_constraintEnd_toEndOf="@id/guidelineAdminAccountDetailRight"
+        app:layout_constraintTop_toBottomOf="@id/tvAccountDetailEmail"
+        style="@style/editText"
+        android:hint="Email"
+        android:inputType="textEmailAddress"
+        android:layout_marginTop="0dp"/>
+
+    <TextView
+        android:id="@+id/tvAccountDetailRole"
+        style="@style/h1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Role"
+        android:textColor="@color/g_gray700"
+        android:layout_marginTop="10dp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="@id/guidelineAdminAccountDetailLeft"
+        app:layout_constraintTop_toBottomOf="@id/edAccountDetailEmail" />
+
+    <EditText
+        android:id="@+id/edAccountDetailRole"
+        android:layout_width="0dp"
+        android:layout_height="@dimen/editTextHeight"
+        app:layout_constraintStart_toStartOf="@id/guidelineAdminAccountDetailLeft"
+        app:layout_constraintEnd_toEndOf="@id/guidelineAdminAccountDetailRight"
+        app:layout_constraintTop_toBottomOf="@id/tvAccountDetailRole"
+        style="@style/editText"
+        android:hint="Role"
+        android:inputType="text" />
+
+    <TextView
+        android:id="@+id/tvAccountDetailFullName"
+        style="@style/h1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Full name"
+        android:textColor="@color/g_gray700"
+        android:layout_marginTop="10dp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="@id/guidelineAdminAccountDetailLeft"
+        app:layout_constraintTop_toBottomOf="@id/edAccountDetailRole" />
+
+    <EditText
+        android:id="@+id/edAccountDetailFullName"
+        android:layout_width="0dp"
+        android:layout_height="@dimen/editTextHeight"
+        app:layout_constraintStart_toStartOf="@id/guidelineAdminAccountDetailLeft"
+        app:layout_constraintEnd_toEndOf="@id/guidelineAdminAccountDetailRight"
+        app:layout_constraintTop_toBottomOf="@id/tvAccountDetailFullName"
+        style="@style/editText"
+        android:hint="Full name"
+        android:inputType="text" />
+
+    <TextView
+        android:id="@+id/tvAccountDetailPassword"
+        style="@style/h1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Password"
+        android:textColor="@color/g_gray700"
+        android:layout_marginTop="10dp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="@id/guidelineAdminAccountDetailLeft"
+        app:layout_constraintTop_toBottomOf="@id/edAccountDetailFullName" />
+
+    <EditText
+        android:id="@+id/edAccountDetailPasswrod"
+        android:layout_width="0dp"
+        android:layout_height="@dimen/editTextHeight"
+        app:layout_constraintStart_toStartOf="@id/guidelineAdminAccountDetailLeft"
+        app:layout_constraintEnd_toEndOf="@id/guidelineAdminAccountDetailRight"
+        app:layout_constraintTop_toBottomOf="@id/tvAccountDetailPassword"
+        style="@style/editText"
+        android:hint="Password"
+        android:inputType="text" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/buttonAdminAccountDetailUpdate"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        style="@style/greenButtonStyle"
+        app:layout_constraintStart_toStartOf="@id/guidelineAdminAccountDetailLeft"
+        app:layout_constraintEnd_toEndOf="@id/guidelineAdminAccountDetailRight"
+        app:layout_constraintTop_toBottomOf="@id/edAccountDetailPasswrod"
+        android:text="Update"
+        android:layout_marginTop="10dp"/>
+
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guidelineAdminAccountDetailLeft"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.06" />
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guidelineAdminAccountDetailRight"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.94" />
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,148 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fillViewport="true">
+    <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/white">
+
+        <ImageView
+            android:id="@+id/carrotIntro"
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:layout_marginTop="10dp"
+            android:foregroundGravity="center"
+            android:src="@drawable/carrot_color"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/tvHomeStoreName"
+            style="@style/h1_bold"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Grocery"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="@id/carrotIntro"
+            app:layout_constraintStart_toStartOf="@id/carrotIntro"
+            app:layout_constraintTop_toBottomOf="@id/carrotIntro" />
+
+        <LinearLayout
+            android:id="@+id/linearHomeSearchStore"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            app:layout_constraintEnd_toEndOf="@id/guidelineHomeRight"
+            app:layout_constraintStart_toStartOf="@id/guidelineHomeLeft"
+            app:layout_constraintTop_toBottomOf="@id/tvHomeStoreName"
+            android:background="@drawable/search_background">
+
+            <SearchView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+            <EditText
+                style="@style/editText"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:hint="Search Store"
+                android:backgroundTint="@color/g_line"
+                android:inputType="none"/>
+        </LinearLayout>
+
+        <ImageView
+            android:id="@+id/imgHomeBanner"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:scaleType="centerCrop"
+            android:src="@drawable/banner"
+            android:layout_marginTop="10dp"
+            app:layout_constraintEnd_toEndOf="@id/linearHomeSearchStore"
+            app:layout_constraintStart_toStartOf="@id/linearHomeSearchStore"
+            app:layout_constraintTop_toBottomOf="@id/linearHomeSearchStore" />
+
+        <TextView
+            android:id="@+id/tvNewArrival"
+            style="@style/h3_bold"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="15dp"
+            android:text="New Arrival"
+            app:layout_constraintStart_toStartOf="@id/guidelineHomeLeft"
+            app:layout_constraintTop_toBottomOf="@id/imgHomeBanner" />
+
+        <TextView
+            android:id="@+id/tvSeeAll"
+            style="@style/h1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="15dp"
+            android:text="@string/see_all"
+            android:textStyle="bold"
+            android:textColor="@color/g_green"
+            app:layout_constraintEnd_toEndOf="@id/guidelineHomeRight"
+            app:layout_constraintTop_toBottomOf="@id/imgHomeBanner"
+            app:layout_constraintBottom_toBottomOf="@id/tvNewArrival"/>
+
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/viewRecycleProductNewArrival"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            app:layout_constraintStart_toStartOf="@id/guidelineHomeLeft"
+            app:layout_constraintTop_toBottomOf="@id/tvNewArrival"
+            android:layout_marginTop="10dp"/>
+
+        <TextView
+            android:id="@+id/tvBestSelling"
+            style="@style/h3_bold"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="15dp"
+            android:text="Best Selling"
+            app:layout_constraintStart_toStartOf="@id/guidelineHomeLeft"
+            app:layout_constraintTop_toBottomOf="@id/viewRecycleProductNewArrival" />
+
+        <TextView
+            android:id="@+id/tvSeeAll2"
+            style="@style/h1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="15dp"
+            android:text="@string/see_all"
+            android:textStyle="bold"
+            android:textColor="@color/g_green"
+            app:layout_constraintEnd_toEndOf="@id/guidelineHomeRight"
+            app:layout_constraintTop_toBottomOf="@id/viewRecycleProductNewArrival"
+            app:layout_constraintBottom_toBottomOf="@id/tvBestSelling"/>
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/viewRecycleProductBestSelling"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            app:layout_constraintStart_toStartOf="@id/guidelineHomeLeft"
+            app:layout_constraintTop_toBottomOf="@id/tvBestSelling"
+            android:layout_marginTop="10dp"/>
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/guidelineHomeLeft"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintGuide_percent=".06" />
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/guidelineHomeRight"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintGuide_percent=".94" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</ScrollView>

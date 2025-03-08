@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <ImageView
+            android:id="@+id/imageView"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:scaleType="centerCrop"
+            android:src="@drawable/vegetable"
+            app:layout_constraintBottom_toBottomOf="@id/guidelineContentTop"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <ImageView
+            android:id="@+id/carrotIntro"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:foregroundGravity="center"
+            android:src="@drawable/carrot_color"
+            android:layout_marginTop="50dp"
+            app:layout_constraintEnd_toEndOf="@id/guidelineIntroContentRight"
+            app:layout_constraintStart_toStartOf="@id/guidelineIntroContentLeft"
+            app:layout_constraintTop_toTopOf="@id/guidelineContentTop" />
+
+
+        <TextView
+            android:id="@+id/tvWelcomeIntro"
+            style="@style/h4"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:gravity="center"
+            android:text="Welcome\n to our glocery"
+            android:textAlignment="center"
+            android:textColor="@color/g_green"
+            app:layout_constraintEnd_toEndOf="@+id/guidelineIntroContentRight"
+            app:layout_constraintStart_toStartOf="@id/guidelineIntroContentLeft"
+            app:layout_constraintTop_toBottomOf="@id/carrotIntro" />
+
+        <TextView
+            android:id="@+id/tvGetYourGroceries"
+            style="@style/h2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="Get your groceries in as fast as one hour"
+            android:textAlignment="center"
+            app:layout_constraintEnd_toEndOf="@+id/tvWelcomeIntro"
+            app:layout_constraintStart_toStartOf="@id/tvWelcomeIntro"
+            app:layout_constraintTop_toBottomOf="@id/tvWelcomeIntro" />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/buttonIntroGetStarted"
+            style="@style/greenButtonStyle"
+            android:layout_width="0dp"
+            android:layout_height="55dp"
+            android:text="Get started"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="@id/guidelineIntroContentRight"
+            app:layout_constraintStart_toStartOf="@id/guidelineIntroContentLeft"
+            app:layout_constraintTop_toBottomOf="@id/tvWelcomeIntro" />
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/guidelineIntroContentLeft"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintGuide_percent="0.07" />
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/guidelineIntroContentRight"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintGuide_percent="0.93" />
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/guidelineContentTop"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            app:layout_constraintGuide_percent="0.4" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</FrameLayout>

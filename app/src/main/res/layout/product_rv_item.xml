@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:background="@color/g_card_background"
+    app:elevation="0dp"
+    >
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/layoutProductRecyclerView"
+        android:layout_width="163.32dp"
+        android:layout_height="248.51dp"
+        android:background="@drawable/product_item_background"
+        android:layout_marginRight="15dp"
+        android:layout_marginBottom="10dp"
+        >
+
+        <ImageView
+            android:id="@+id/imgProductItem"
+            android:layout_width="100dp"
+            android:layout_height="70dp"
+            android:layout_marginTop="30dp"
+            android:scaleType="fitCenter"
+            android:src="@drawable/product_item_sample"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/tvProductItemName"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/poppins_thin"
+            android:text="Organic Bananas"
+            app:layout_constraintEnd_toEndOf="@id/guidelineProductItemRight"
+            app:layout_constraintStart_toStartOf="@id/guidelineProductItemLeft"
+            app:layout_constraintTop_toBottomOf="@id/guidelineProductItemImage" />
+
+        <TextView
+            android:id="@+id/tvProductItemWeight"
+            style="@style/h1"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="1 kg, Price"
+            android:textSize="12dp"
+            app:layout_constraintStart_toStartOf="@id/guidelineProductItemLeft"
+            app:layout_constraintTop_toBottomOf="@id/tvProductItemName"
+           />
+
+        <TextView
+            android:id="@+id/tvProductItemAmount"
+            style="@style/h1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/g_red"
+            android:text="10 "
+            android:textSize="12dp"
+            app:layout_constraintStart_toStartOf="@id/guidelineProductItemLeft"
+            app:layout_constraintTop_toBottomOf="@id/tvProductItemWeight"
+            />
+
+        <TextView
+            style="@style/h1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text=" Product Left"
+            android:textSize="12dp"
+            app:layout_constraintLeft_toRightOf="@id/tvProductItemAmount"
+            app:layout_constraintBottom_toBottomOf="@id/tvProductItemAmount"
+            app:layout_constraintTop_toTopOf="@id/tvProductItemAmount" />
+
+        <TextView
+            android:id="@+id/tvProductItemPrice"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:layout_weight="1"
+            android:text="4.99"
+            android:fontFamily="@font/poppins_thin"
+            app:layout_constraintStart_toStartOf="@id/tvProductItemWeight"
+            app:layout_constraintTop_toBottomOf="@id/tvProductItemWeight" />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="$"
+            android:fontFamily="@font/poppins_thin"
+            app:layout_constraintLeft_toRightOf="@id/tvProductItemPrice"
+            app:layout_constraintBottom_toBottomOf="@id/tvProductItemPrice"
+            app:layout_constraintTop_toTopOf="@id/tvProductItemPrice" />
+
+        <ImageButton
+            android:id="@+id/buttonProductItemAddToCart"
+            android:layout_width="45.67dp"
+            android:layout_height="45.67dp"
+            style="@style/greenButtonStyle"
+            android:src="@drawable/ic_button_plus"
+            app:layout_constraintTop_toBottomOf="@id/tvProductItemWeight"
+            app:layout_constraintEnd_toEndOf="@id/guidelineProductItemRight"
+            android:layout_marginTop="10dp"/>
+
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/guidelineProductItemImage"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            app:layout_constraintGuide_percent="0.5" />
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/guidelineProductItemLeft"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintGuide_percent="0.08" />
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/guidelineProductItemRight"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintGuide_percent="0.92" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</LinearLayout>

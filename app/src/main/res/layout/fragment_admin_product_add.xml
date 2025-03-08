@@ -1,0 +1,193 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <ImageView
+        android:id="@+id/imgAdminProductAddBack"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:src="@drawable/arrow_left"
+        app:layout_constraintStart_toStartOf="@id/guidelineAdminProductAddLeft"
+        app:layout_constraintTop_toTopOf="@id/tvAdminProductAdd"
+        android:textAlignment="center" />
+
+    <TextView
+        android:id="@+id/tvAdminProductAdd"
+        style="@style/h3_bold"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:text="Product Add"
+        android:textAlignment="center"
+        app:layout_constraintEnd_toEndOf="@id/guidelineAdminProductAddRight"
+        app:layout_constraintStart_toStartOf="@id/guidelineAdminProductAddLeft"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/tvProductAddName"
+        style="@style/h1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Product Name"
+        android:textColor="@color/g_gray700"
+        android:layout_marginTop="10dp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="@id/guidelineAdminProductAddLeft"
+        app:layout_constraintTop_toBottomOf="@id/tvAdminProductAdd" />
+
+    <EditText
+        android:id="@+id/edProductAddName"
+        android:layout_width="0dp"
+        android:layout_height="@dimen/editTextHeight"
+        app:layout_constraintStart_toStartOf="@id/guidelineAdminProductAddLeft"
+        app:layout_constraintEnd_toEndOf="@id/guidelineAdminProductAddRight"
+        app:layout_constraintTop_toBottomOf="@id/tvProductAddName"
+        style="@style/editText"
+        android:hint="Name"
+        android:inputType="text"
+        android:layout_marginTop="0dp"/>
+
+    <TextView
+        android:id="@+id/tvProductAddWeight"
+        style="@style/h1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Weight"
+        android:textColor="@color/g_gray700"
+        android:layout_marginTop="10dp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="@id/guidelineAdminProductAddLeft"
+        app:layout_constraintTop_toBottomOf="@id/edProductAddName" />
+
+    <EditText
+        android:id="@+id/edProductAddWeigh"
+        android:layout_width="0dp"
+        android:layout_height="@dimen/editTextHeight"
+        app:layout_constraintStart_toStartOf="@id/guidelineAdminProductAddLeft"
+        app:layout_constraintEnd_toEndOf="@id/guidelineAdminProductAddRight"
+        app:layout_constraintTop_toBottomOf="@id/tvProductAddWeight"
+        style="@style/editText"
+        android:hint="Weight"
+        android:inputType="text"
+        android:layout_marginTop="0dp"/>
+
+    <TextView
+        android:id="@+id/tvProductAddDescription"
+        style="@style/h1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Description"
+        android:textColor="@color/g_gray700"
+        android:layout_marginTop="10dp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="@id/guidelineAdminProductAddLeft"
+        app:layout_constraintTop_toBottomOf="@id/edProductAddWeigh" />
+
+    <EditText
+        android:id="@+id/edProductAddDescription"
+        android:layout_width="0dp"
+        android:layout_height="@dimen/editTextHeight"
+        app:layout_constraintStart_toStartOf="@id/guidelineAdminProductAddLeft"
+        app:layout_constraintEnd_toEndOf="@id/guidelineAdminProductAddRight"
+        app:layout_constraintTop_toBottomOf="@id/tvProductAddDescription"
+        style="@style/editText"
+        android:hint="Description"
+        android:inputType="text"
+        android:layout_marginTop="0dp"/>
+
+    <TextView
+        android:id="@+id/tvProductAddPrice"
+        style="@style/h1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Price"
+        android:textColor="@color/g_gray700"
+        android:layout_marginTop="10dp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="@id/guidelineAdminProductAddLeft"
+        app:layout_constraintTop_toBottomOf="@id/edProductAddDescription" />
+
+    <EditText
+        android:id="@+id/edProductAddPrice"
+        android:layout_width="0dp"
+        android:layout_height="@dimen/editTextHeight"
+        app:layout_constraintStart_toStartOf="@id/guidelineAdminProductAddLeft"
+        app:layout_constraintEnd_toEndOf="@id/guidelineAdminProductAddRight"
+        app:layout_constraintTop_toBottomOf="@id/tvProductAddPrice"
+        style="@style/editText"
+        android:hint="Price"
+        android:inputType="text"
+        android:layout_marginTop="0dp"/>
+
+    <TextView
+        android:id="@+id/tvProductAddLabel"
+        style="@style/h1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Label"
+        android:textColor="@color/g_gray700"
+        android:layout_marginTop="10dp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="@id/guidelineAdminProductAddLeft"
+        app:layout_constraintTop_toBottomOf="@id/edProductAddPrice" />
+
+    <Spinner
+        android:id="@+id/spinnerProductAddLabel"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toStartOf="@id/guidelineAdminProductAddLeft"
+        app:layout_constraintEnd_toEndOf="@id/guidelineAdminProductAddRight"
+        app:layout_constraintTop_toBottomOf="@id/tvProductAddLabel"
+        android:layout_marginTop="10dp" />
+
+    <TextView
+        android:id="@+id/tvProductAddCategory"
+        style="@style/h1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Category"
+        android:textColor="@color/g_gray700"
+        android:layout_marginTop="10dp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="@id/guidelineAdminProductAddLeft"
+        app:layout_constraintTop_toBottomOf="@id/spinnerProductAddLabel" />
+
+    <Spinner
+        android:id="@+id/spinnerProductAddCategory"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toStartOf="@id/guidelineAdminProductAddLeft"
+        app:layout_constraintEnd_toEndOf="@id/guidelineAdminProductAddRight"
+        app:layout_constraintTop_toBottomOf="@id/tvProductAddCategory"
+        android:layout_marginTop="10dp" />
+
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/buttonAdminProductAddAdd"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        style="@style/greenButtonStyle"
+        app:layout_constraintStart_toStartOf="@id/guidelineAdminProductAddLeft"
+        app:layout_constraintEnd_toEndOf="@id/guidelineAdminProductAddRight"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:text="Add"
+        android:layout_marginBottom="20dp"
+        android:layout_marginTop="10dp"/>
+
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guidelineAdminProductAddLeft"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.06" />
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guidelineAdminProductAddRight"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.94" />
+</androidx.constraintlayout.widget.ConstraintLayout>

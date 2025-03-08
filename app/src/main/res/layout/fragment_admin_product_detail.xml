@@ -1,0 +1,219 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <ImageView
+        android:id="@+id/imgAdminProductDetailBack"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:src="@drawable/arrow_left"
+        app:layout_constraintStart_toStartOf="@id/guidelineAdminProductDetailLeft"
+        app:layout_constraintTop_toTopOf="@id/tvAdminProductDetail"
+        android:textAlignment="center" />
+
+    <TextView
+        android:id="@+id/tvAdminProductDetail"
+        style="@style/h3_bold"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:text="Product Detail"
+        android:textAlignment="center"
+        app:layout_constraintEnd_toEndOf="@id/guidelineAdminProductDetailRight"
+        app:layout_constraintStart_toStartOf="@id/guidelineAdminProductDetailLeft"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/tvProductDetailName"
+        style="@style/h1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Product Name"
+        android:textColor="@color/g_gray700"
+        android:layout_marginTop="10dp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="@id/guidelineAdminProductDetailLeft"
+        app:layout_constraintTop_toBottomOf="@id/tvAdminProductDetail" />
+
+    <EditText
+        android:id="@+id/edProductDetailName"
+        android:layout_width="0dp"
+        android:layout_height="@dimen/editTextHeight"
+        app:layout_constraintStart_toStartOf="@id/guidelineAdminProductDetailLeft"
+        app:layout_constraintEnd_toEndOf="@id/guidelineAdminProductDetailRight"
+        app:layout_constraintTop_toBottomOf="@id/tvProductDetailName"
+        style="@style/editText"
+        android:hint="Name"
+        android:inputType="text"
+        android:layout_marginTop="0dp"/>
+
+    <TextView
+        android:id="@+id/tvProductDetailWeight"
+        style="@style/h1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Weight"
+        android:textColor="@color/g_gray700"
+        android:layout_marginTop="10dp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="@id/guidelineAdminProductDetailLeft"
+        app:layout_constraintTop_toBottomOf="@id/edProductDetailName" />
+
+    <EditText
+        android:id="@+id/edProductDetailWeight"
+        android:layout_width="0dp"
+        android:layout_height="@dimen/editTextHeight"
+        app:layout_constraintStart_toStartOf="@id/guidelineAdminProductDetailLeft"
+        app:layout_constraintEnd_toEndOf="@id/guidelineAdminProductDetailRight"
+        app:layout_constraintTop_toBottomOf="@id/tvProductDetailWeight"
+        style="@style/editText"
+        android:hint="Weight"
+        android:inputType="text"
+        android:layout_marginTop="0dp"/>
+
+    <TextView
+        android:id="@+id/tvProductDetailDescription"
+        style="@style/h1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Description"
+        android:textColor="@color/g_gray700"
+        android:layout_marginTop="10dp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="@id/guidelineAdminProductDetailLeft"
+        app:layout_constraintTop_toBottomOf="@id/edProductDetailWeight" />
+
+    <EditText
+        android:id="@+id/edProductDetailDescription"
+        android:layout_width="0dp"
+        android:layout_height="@dimen/editTextHeight"
+        app:layout_constraintStart_toStartOf="@id/guidelineAdminProductDetailLeft"
+        app:layout_constraintEnd_toEndOf="@id/guidelineAdminProductDetailRight"
+        app:layout_constraintTop_toBottomOf="@id/tvProductDetailDescription"
+        style="@style/editText"
+        android:hint="Description"
+        android:inputType="text"
+        android:layout_marginTop="0dp"/>
+
+    <TextView
+        android:id="@+id/tvProductDetailPrice"
+        style="@style/h1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Price"
+        android:textColor="@color/g_gray700"
+        android:layout_marginTop="10dp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="@id/guidelineAdminProductDetailLeft"
+        app:layout_constraintTop_toBottomOf="@id/edProductDetailDescription" />
+
+    <EditText
+        android:id="@+id/edProductDetailPrice"
+        android:layout_width="0dp"
+        android:layout_height="@dimen/editTextHeight"
+        app:layout_constraintStart_toStartOf="@id/guidelineAdminProductDetailLeft"
+        app:layout_constraintEnd_toEndOf="@id/guidelineAdminProductDetailRight"
+        app:layout_constraintTop_toBottomOf="@id/tvProductDetailPrice"
+        style="@style/editText"
+        android:hint="Price"
+        android:inputType="text"
+        android:layout_marginTop="0dp"/>
+
+    <TextView
+        android:id="@+id/tvProductDetailAmount"
+        style="@style/h1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Amount"
+        android:textColor="@color/g_gray700"
+        android:layout_marginTop="10dp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="@id/guidelineAdminProductDetailLeft"
+        app:layout_constraintTop_toBottomOf="@id/edProductDetailPrice" />
+
+    <EditText
+        android:id="@+id/edProductDetailAmount"
+        android:layout_width="0dp"
+        android:layout_height="@dimen/editTextHeight"
+        app:layout_constraintStart_toStartOf="@id/guidelineAdminProductDetailLeft"
+        app:layout_constraintEnd_toEndOf="@id/guidelineAdminProductDetailRight"
+        app:layout_constraintTop_toBottomOf="@id/tvProductDetailAmount"
+        style="@style/editText"
+        android:hint="Amount"
+        android:inputType="number"
+        android:layout_marginTop="0dp"/>
+
+
+
+    <TextView
+        android:id="@+id/tvProductDetailLabel"
+        style="@style/h1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Label"
+        android:textColor="@color/g_gray700"
+        android:layout_marginTop="10dp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="@id/guidelineAdminProductDetailLeft"
+        app:layout_constraintTop_toBottomOf="@id/edProductDetailAmount" />
+
+    <Spinner
+        android:id="@+id/spinnerProductDetailLabel"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toStartOf="@id/guidelineAdminProductDetailLeft"
+        app:layout_constraintEnd_toEndOf="@id/guidelineAdminProductDetailRight"
+        app:layout_constraintTop_toBottomOf="@id/tvProductDetailLabel"
+        android:layout_marginTop="10dp" />
+
+    <TextView
+        android:id="@+id/tvProductDetailCategory"
+        style="@style/h1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Category"
+        android:textColor="@color/g_gray700"
+        android:layout_marginTop="10dp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="@id/guidelineAdminProductDetailLeft"
+        app:layout_constraintTop_toBottomOf="@id/spinnerProductDetailLabel" />
+
+    <Spinner
+        android:id="@+id/spinnerProductDetailCategory"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toStartOf="@id/guidelineAdminProductDetailLeft"
+        app:layout_constraintEnd_toEndOf="@id/guidelineAdminProductDetailRight"
+        app:layout_constraintTop_toBottomOf="@id/tvProductDetailCategory"
+        android:layout_marginTop="10dp" />
+
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/buttonAdminProductDetailUpdate"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        style="@style/greenButtonStyle"
+        app:layout_constraintStart_toStartOf="@id/guidelineAdminProductDetailLeft"
+        app:layout_constraintEnd_toEndOf="@id/guidelineAdminProductDetailRight"
+        app:layout_constraintTop_toBottomOf="@id/spinnerProductDetailCategory"
+        android:text="Update"
+        android:layout_marginTop="10dp"
+        android:layout_marginBottom="20dp"/>
+
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guidelineAdminProductDetailLeft"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.06" />
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guidelineAdminProductDetailRight"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.94" />
+</androidx.constraintlayout.widget.ConstraintLayout>

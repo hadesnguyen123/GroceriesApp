@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white">
+
+    <TextView
+        android:id="@+id/tvFindProductCategory"
+        style="@style/h3_bold"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="15dp"
+        android:text="Find Product"
+        android:textAlignment="center"
+        app:layout_constraintEnd_toEndOf="@id/guidelineCategoryRight"
+        app:layout_constraintStart_toStartOf="@id/guidelineCategoryLeft"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <LinearLayout
+        android:id="@+id/linearSearchSearchStore"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        app:layout_constraintEnd_toEndOf="@id/guidelineCategoryRight"
+        app:layout_constraintStart_toStartOf="@id/guidelineCategoryLeft"
+        app:layout_constraintTop_toBottomOf="@id/tvFindProductCategory"
+        android:background="@drawable/search_background">
+
+        <SearchView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+        <EditText
+            style="@style/editText"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:hint="Search Store"
+            android:backgroundTint="@color/g_line"
+            android:inputType="none"/>
+    </LinearLayout>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/viewRecycleCategoryList"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:orientation="horizontal"
+        android:paddingBottom="120dp"
+        app:layout_constraintStart_toStartOf="@id/guidelineCategoryLeft"
+        app:layout_constraintTop_toBottomOf="@id/linearSearchSearchStore"
+        app:layout_constraintEnd_toEndOf="@id/guidelineCategoryRight"/>
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guidelineCategoryLeft"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.06" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guidelineCategoryRight"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.94" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

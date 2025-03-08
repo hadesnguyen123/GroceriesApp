@@ -1,0 +1,188 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/shopping_graph"
+    app:startDestination="@id/homeFragment">
+
+    <fragment
+        android:id="@+id/cartFragment"
+        android:name="com.example.grocerietproject.fragments.shopping.CartFragment"
+        android:label="CartFragment"
+        tools:layout="@layout/fragment_cart">
+        <action
+            android:id="@+id/action_cartFragment_self"
+            app:destination="@id/cartFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/homeFragment"
+        android:name="com.example.grocerietproject.fragments.shopping.HomeFragment"
+        android:label="HomeFragment"
+        tools:layout="@layout/fragment_home">
+        <action
+            android:id="@+id/action_homeFragment_to_searchFragment2"
+            app:destination="@id/searchFragment" />
+        <action
+            android:id="@+id/action_homeFragment_to_productDetailFragment"
+            app:destination="@id/productDetailFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/searchFragment"
+        android:name="com.example.grocerietproject.fragments.shopping.SearchFragment"
+        android:label="SearchFragment"
+        tools:layout="@layout/fragment_search">
+        <action
+            android:id="@+id/action_searchFragment_to_homeFragment2"
+            app:destination="@id/homeFragment" />
+        <action
+            android:id="@+id/action_searchFragment_to_productByCategoryFragment"
+            app:destination="@id/productByCategoryFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/profileFragment"
+        android:name="com.example.grocerietproject.fragments.shopping.ProfileFragment"
+        android:label="ProfileFragment"
+        tools:layout="@layout/fragment_profile">
+        <action
+            android:id="@+id/action_profileFragment_to_adminAccountListFragment"
+            app:destination="@id/adminAccountListFragment" />
+        <action
+            android:id="@+id/action_profileFragment_to_adminCateListFragment"
+            app:destination="@id/adminCateListFragment" />
+        <action
+            android:id="@+id/action_profileFragment_to_adminProductListFragment"
+            app:destination="@id/adminProductListFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/productByCategoryFragment"
+        android:name="com.example.grocerietproject.fragments.shopping.ProductByCategoryFragment"
+        android:label="ProductByCategoryFragment"
+        tools:layout="@layout/fragment_products_by_category">
+        <action
+            android:id="@+id/action_productByCategoryFragment_to_searchFragment"
+            app:destination="@id/searchFragment" />
+        <action
+            android:id="@+id/action_productByCategoryFragment_to_productDetailFragment"
+            app:destination="@id/productDetailFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/productDetailFragment"
+        android:name="com.example.grocerietproject.fragments.shopping.ProductDetailFragment"
+        android:label="ProductDetailFragment"
+        tools:layout="@layout/fragment_product_details">
+        <action
+            android:id="@+id/action_productDetailFragment_to_homeFragment"
+            app:destination="@id/homeFragment" />
+        <action
+            android:id="@+id/action_productDetailFragment_to_productByCategoryFragment"
+            app:destination="@id/productByCategoryFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/adminAccountListFragment"
+        android:name="com.example.grocerietproject.fragments.accountManagement.AdminAccountListFragment"
+        android:label="AdminAccountListFragment"
+        tools:layout="@layout/fragment_admin_account_list">
+        <action
+            android:id="@+id/action_adminAccountListFragment_to_profileFragment"
+            app:destination="@id/profileFragment" />
+        <action
+            android:id="@+id/action_adminAccountListFragment_to_adminAccountDetailFragment"
+            app:destination="@id/adminAccountDetailFragment" />
+        <action
+            android:id="@+id/action_adminAccountListFragment_to_adminAccountAddFragment"
+            app:destination="@id/adminAccountAddFragment" />
+        <action
+            android:id="@+id/action_adminAccountListFragment_self"
+            app:destination="@id/adminAccountListFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/adminAccountDetailFragment"
+        android:name="com.example.grocerietproject.fragments.accountManagement.AdminAccountDetailFragment"
+        android:label="AdminAccountDetailFragment"
+        tools:layout="@layout/fragment_admin_account_detail">
+        <action
+            android:id="@+id/action_adminAccountDetailFragment_to_adminAccountListFragment"
+            app:destination="@id/adminAccountListFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/adminAccountAddFragment"
+        android:name="com.example.grocerietproject.fragments.accountManagement.AdminAccountAddFragment"
+        android:label="AdminAccountAddFragment"
+        tools:layout="@layout/fragment_admin_account_add">
+        <action
+            android:id="@+id/action_adminAccountAddFragment_to_adminAccountListFragment"
+            app:destination="@id/adminAccountListFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/adminCateListFragment"
+        android:name="com.example.grocerietproject.fragments.categoryManagement.AdminCateListFragment"
+        android:label="AdminCateListFragment"
+        tools:layout="@layout/fragment_admin_category_list">
+        <action
+            android:id="@+id/action_adminCateListFragment_to_profileFragment2"
+            app:destination="@id/profileFragment" />
+        <action
+            android:id="@+id/action_adminCateListFragment_to_adminCateAddFragment"
+            app:destination="@id/adminCateAddFragment" />
+        <action
+            android:id="@+id/action_adminCateListFragment_to_adminCateDetailFragment"
+            app:destination="@id/adminCateDetailFragment" />
+        <action
+            android:id="@+id/action_adminCateListFragment_self"
+            app:destination="@id/adminCateListFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/adminProductListFragment"
+        android:name="com.example.grocerietproject.fragments.productManagement.AdminProductListFragment"
+        android:label="AdminProductListFragment"
+        tools:layout="@layout/fragment_admin_product_list">
+        <action
+            android:id="@+id/action_adminProductListFragment_to_profileFragment"
+            app:destination="@id/profileFragment" />
+        <action
+            android:id="@+id/action_adminProductListFragment_to_adminProductDetailFragment"
+            app:destination="@id/adminProductDetailFragment" />
+        <action
+            android:id="@+id/action_adminProductListFragment_to_adminProductAddFragment"
+            app:destination="@id/adminProductAddFragment" />
+        <action
+            android:id="@+id/action_adminProductListFragment_self"
+            app:destination="@id/adminProductListFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/adminCateDetailFragment"
+        android:name="com.example.grocerietproject.fragments.categoryManagement.AdminCateDetailFragment"
+        android:label="AdminCateDetailFragment"
+        tools:layout="@layout/fragment_admin_category_detail">
+        <action
+            android:id="@+id/action_adminCateDetailFragment_to_adminCateListFragment"
+            app:destination="@id/adminCateListFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/adminCateAddFragment"
+        android:name="com.example.grocerietproject.fragments.categoryManagement.AdminCateAddFragment"
+        android:label="AdminCateAddFragment"
+        tools:layout="@layout/fragment_admin_category_add">
+        <action
+            android:id="@+id/action_adminCateAddFragment_to_adminCateListFragment"
+            app:destination="@id/adminCateListFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/adminProductAddFragment"
+        android:name="com.example.grocerietproject.fragments.productManagement.AdminProductAddFragment"
+        android:label="AdminProductAddFragment"
+        tools:layout="@layout/fragment_admin_product_add">
+        <action
+            android:id="@+id/action_adminProductAddFragment_to_adminProductListFragment"
+            app:destination="@id/adminProductListFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/adminProductDetailFragment"
+        android:name="com.example.grocerietproject.fragments.productManagement.AdminProductDetailFragment"
+        android:label="AdminProductDetailFragment"
+        tools:layout="@layout/fragment_admin_product_detail">
+        <action
+            android:id="@+id/action_adminProductDetailFragment_to_adminProductListFragment"
+            app:destination="@id/adminProductListFragment" />
+    </fragment>
+</navigation>

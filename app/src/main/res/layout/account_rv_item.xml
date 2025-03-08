@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/white"
+    app:elevation="0dp">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="10dp"
+        android:background="@color/white">
+
+        <LinearLayout
+            android:id="@+id/linearUserName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <TextView
+                style="@style/h1_bold"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Id: " />
+
+            <TextView
+                style="@style/h1_bold"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Role: " />
+
+            <TextView
+                style="@style/h1_bold"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Email: " />
+
+            <TextView
+                style="@style/h1_bold"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="FullName: " />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/linearViewRecycleAccountData"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintLeft_toRightOf="@id/linearUserName"
+            app:layout_constraintTop_toTopOf="@id/linearUserName">
+
+            <TextView
+                android:id="@+id/tvRecycleAccountId"
+                style="@style/h1_bold"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="123" />
+
+            <TextView
+                android:id="@+id/tvRecycleAccountRole"
+                style="@style/h1_bold"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="123" />
+
+            <TextView
+                android:id="@+id/tvRecycleAccountEmail"
+                style="@style/h1_bold"
+                android:layout_width="200dp"
+                android:layout_height="wrap_content"
+                android:text="123" />
+
+            <TextView
+                android:id="@+id/tvRecycleAccountFullName"
+                style="@style/h1_bold"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="123" />
+        </LinearLayout>
+
+        <ImageView
+            android:id="@+id/imgButtonRecycleAdminAccountDetail"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_marginLeft="5dp"
+            android:src="@drawable/ic_edit"
+            app:layout_constraintBottom_toBottomOf="@id/linearViewRecycleAccountData"
+            app:layout_constraintLeft_toRightOf="@id/linearViewRecycleAccountData"
+            app:layout_constraintTop_toTopOf="@id/linearViewRecycleAccountData" />
+
+        <ImageView
+            android:id="@+id/imgButtonRecycleAdminAccountDelete"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_marginLeft="5dp"
+            android:src="@drawable/ic_delete"
+            app:layout_constraintBottom_toBottomOf="@id/imgButtonRecycleAdminAccountDetail"
+            app:layout_constraintLeft_toRightOf="@id/imgButtonRecycleAdminAccountDetail"
+            app:layout_constraintTop_toTopOf="@id/imgButtonRecycleAdminAccountDetail" />
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_linebreak"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/guidelineAdminAccountBottom"/>
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/guidelineAdminAccountBottom"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            app:layout_constraintGuide_begin="96dp" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</LinearLayout>

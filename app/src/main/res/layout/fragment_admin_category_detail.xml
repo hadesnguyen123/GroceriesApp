@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <ImageView
+        android:id="@+id/imgAdminCategoryDetailBack"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:src="@drawable/arrow_left"
+        app:layout_constraintStart_toStartOf="@id/guidelineAdminCategoryDetailLeft"
+        app:layout_constraintTop_toTopOf="@id/tvAdminCategoryDetail"
+        android:textAlignment="center" />
+
+    <TextView
+        android:id="@+id/tvAdminCategoryDetail"
+        style="@style/h3_bold"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:text="Category Detail"
+        android:textAlignment="center"
+        app:layout_constraintEnd_toEndOf="@id/guidelineAdminCategoryDetailRight"
+        app:layout_constraintStart_toStartOf="@id/guidelineAdminCategoryDetailLeft"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/tvCategoryDetailName"
+        style="@style/h1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Name"
+        android:textColor="@color/g_gray700"
+        android:layout_marginTop="10dp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="@id/guidelineAdminCategoryDetailLeft"
+        app:layout_constraintTop_toBottomOf="@id/tvAdminCategoryDetail" />
+
+    <EditText
+        android:id="@+id/edCategoryDetailName"
+        android:layout_width="0dp"
+        android:layout_height="@dimen/editTextHeight"
+        app:layout_constraintStart_toStartOf="@id/guidelineAdminCategoryDetailLeft"
+        app:layout_constraintEnd_toEndOf="@id/guidelineAdminCategoryDetailRight"
+        app:layout_constraintTop_toBottomOf="@id/tvCategoryDetailName"
+        style="@style/editText"
+        android:hint="Name"
+        android:inputType="text"
+        android:layout_marginTop="0dp"/>
+
+    <TextView
+        android:id="@+id/tvCategoryDetailDescription"
+        style="@style/h1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Description"
+        android:textColor="@color/g_gray700"
+        android:layout_marginTop="10dp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="@id/guidelineAdminCategoryDetailLeft"
+        app:layout_constraintTop_toBottomOf="@id/edCategoryDetailName" />
+
+    <EditText
+        android:id="@+id/edCategoryDetailDescription"
+        android:layout_width="0dp"
+        android:layout_height="@dimen/editTextHeight"
+        app:layout_constraintStart_toStartOf="@id/guidelineAdminCategoryDetailLeft"
+        app:layout_constraintEnd_toEndOf="@id/guidelineAdminCategoryDetailRight"
+        app:layout_constraintTop_toBottomOf="@id/tvCategoryDetailDescription"
+        style="@style/editText"
+        android:hint="Description"
+        android:inputType="text"
+        android:layout_marginTop="0dp"/>
+
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/buttonAdminCategoryDetailUpdate"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        style="@style/greenButtonStyle"
+        app:layout_constraintStart_toStartOf="@id/guidelineAdminCategoryDetailLeft"
+        app:layout_constraintEnd_toEndOf="@id/guidelineAdminCategoryDetailRight"
+        app:layout_constraintTop_toBottomOf="@id/edCategoryDetailDescription"
+        android:text="Update"
+        android:layout_marginTop="10dp"/>
+
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guidelineAdminCategoryDetailLeft"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.06" />
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guidelineAdminCategoryDetailRight"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.94" />
+</androidx.constraintlayout.widget.ConstraintLayout>
